@@ -1,0 +1,56 @@
+/* Reset margins so there are no white borders around the viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Background image fit and positioning */
+.app-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps image pinned when scrolling on mobile */
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Dark semi-transparent tint over the whole screen */
+.app-backdrop {
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Dims the bright sky/snow/clouds */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+
+.content-container {
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Makes your heading crisp and visible on any background */
+.app-heading {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Search input container background so textfield label/input text is clearly visible */
+.content-container .SearchBox {
+    margin-bottom: 16px;
+}
+
+.content-container .SearchBox .MuiTextField-root {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 8px;
+}
